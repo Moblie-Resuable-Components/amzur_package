@@ -1,5 +1,3 @@
-
-
 // library animated_textformfields;
 library flutter_util_package;
 

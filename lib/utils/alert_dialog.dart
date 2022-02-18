@@ -1,15 +1,17 @@
-
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+
+//test
 displayDialog(BuildContext context,
-    {String title = "", String content = "", Function? event, String? buttonText}) {
+    {String title = "",
+    String content = "",
+    Function? event,
+    String? buttonText}) {
   showDialog(
       context: context,
       builder: (BuildContext context) {
-        return  AlertDialog(
+        return AlertDialog(
           title: Text(title),
           content: Text(content),
           actions: [
@@ -21,18 +23,16 @@ displayDialog(BuildContext context,
               ),
               // onPressed: event ?? () => Navigator.pop(context),
 
-              onPressed: (){
-                if(event !=null){
+              onPressed: () {
+                if (event != null) {
                   Navigator.pop(context);
                   event();
-                }else{
+                } else {
                   Navigator.pop(context);
                 }
               },
-
             ),
           ],
         );
-      }
-  );
+      });
 }

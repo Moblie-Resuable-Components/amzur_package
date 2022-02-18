@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:amzur_package/animated_textformfield/animated_textformfield.dart';
- import 'package:amzur_package/animated_textformfields.dart';
+import 'package:amzur_package/animated_textformfields.dart';
 //
- import 'package:amzur_package/utils/alert_dialog.dart';
+import 'package:amzur_package/utils/alert_dialog.dart';
 //
 import 'package:amzur_package/utils/snackbar.dart';
 
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 
 class DemoPage extends StatefulWidget {
   const DemoPage({Key? key, required this.title}) : super(key: key);
-  final String title ;
+  final String title;
 
   @override
   _DemoPageState createState() => _DemoPageState();
@@ -38,9 +38,10 @@ class DemoPage extends StatefulWidget {
 class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
   FocusNode myFocusNode = FocusNode();
   TextEditingController textEditingControllerAnimated =
-  new TextEditingController();
-  TextEditingController textEditingControllerLite = new TextEditingController();
-  TextEditingController textEditingControllerSlideIn = new TextEditingController();
+      TextEditingController();
+  TextEditingController textEditingControllerLite = TextEditingController();
+  TextEditingController textEditingControllerSlideIn =
+      TextEditingController();
 
   @override
   void dispose() {
@@ -157,19 +158,20 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
                 backgroundColor: Colors.orange,
                 textColor: Colors.black,
                 text: "Show Snack Bar",
-                onTap: (){
+                onTap: () {
                   showSnackBar(context, "Showing SnackBar");
-                }
-            ),
+                }),
 
             Button(
                 backgroundColor: Colors.orange,
                 textColor: Colors.black,
                 text: "Show Alert Dialog",
-                onTap: (){
-                  displayDialog(context, title: "Alert Title",content: "here are description",buttonText: "close it" );
-                }
-            ),
+                onTap: () {
+                  displayDialog(context,
+                      title: "Alert Title",
+                      content: "here are description",
+                      buttonText: "close it");
+                }),
 
             // Button(
             //     backgroundColor: Colors.orange,
@@ -179,13 +181,6 @@ class _DemoPageState extends State<DemoPage> with TickerProviderStateMixin {
             //
             //     }
             // ),
-
-
-
-
-
-
-
           ],
         ),
       ),

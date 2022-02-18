@@ -1,7 +1,7 @@
 name: amzur_package
 description: Flutter util package.
 version: 0.0.1
-homepage:
+homepage: https://github.com/kapilb145/amzur_package
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

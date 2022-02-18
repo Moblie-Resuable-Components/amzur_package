@@ -1,15 +1,18 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Button extends StatelessWidget {
-   final Color backgroundColor, textColor;
+  final Color backgroundColor, textColor;
   final String text;
   final VoidCallback onTap;
 
- const Button(
-     {Key? key, required this.backgroundColor, required this.textColor,required this.text,required this.onTap}) : super(key: key);
+  const Button(
+      {Key? key,
+      required this.backgroundColor,
+      required this.textColor,
+      required this.text,
+      required this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,11 +30,7 @@ class Button extends StatelessWidget {
             text,
             style: TextStyle(color: textColor),
           ),
-          onPressed: () => onTap()
-
-
-
-      ),
+          onPressed: () => onTap()),
     );
   }
 }
